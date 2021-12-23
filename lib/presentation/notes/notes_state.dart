@@ -8,7 +8,4 @@ class NotesState with _$NotesState {
   const factory NotesState({
     required List<Note> notes,
   }) = _NotesState;
-
-  factory NotesState.fromJson(Map<String, dynamic> json) =>
-      _$NotesStateFromJson(json);
 }

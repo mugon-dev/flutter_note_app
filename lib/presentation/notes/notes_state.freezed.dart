@@ -13,10 +13,6 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-NotesState _$NotesStateFromJson(Map<String, dynamic> json) {
-  return _NotesState.fromJson(json);
-}
-
 /// @nodoc
 class _$NotesStateTearOff {
   const _$NotesStateTearOff();
@@ -25,10 +21,6 @@ class _$NotesStateTearOff {
     return _NotesState(
       notes: notes,
     );
-  }
-
-  NotesState fromJson(Map<String, Object?> json) {
-    return NotesState.fromJson(json);
   }
 }
 
@@ -39,7 +31,6 @@ const $NotesState = _$NotesStateTearOff();
 mixin _$NotesState {
   List<Note> get notes => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $NotesStateCopyWith<NotesState> get copyWith =>
       throw _privateConstructorUsedError;
@@ -107,12 +98,9 @@ class __$NotesStateCopyWithImpl<$Res> extends _$NotesStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
 class _$_NotesState implements _NotesState {
   const _$_NotesState({required this.notes});
-
-  factory _$_NotesState.fromJson(Map<String, dynamic> json) =>
-      _$$_NotesStateFromJson(json);
 
   @override
   final List<Note> notes;
@@ -138,18 +126,10 @@ class _$_NotesState implements _NotesState {
   @override
   _$NotesStateCopyWith<_NotesState> get copyWith =>
       __$NotesStateCopyWithImpl<_NotesState>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_NotesStateToJson(this);
-  }
 }
 
 abstract class _NotesState implements NotesState {
   const factory _NotesState({required List<Note> notes}) = _$_NotesState;
-
-  factory _NotesState.fromJson(Map<String, dynamic> json) =
-      _$_NotesState.fromJson;
 
   @override
   List<Note> get notes;
